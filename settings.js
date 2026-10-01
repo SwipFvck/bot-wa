@@ -1,6 +1,6 @@
 //=================
 global.prefix = [".", "!", "/", "👙", "😹", "🗿"];
-global.owner = "6283895883216";
+global.owner = "6212345678";
 global.useOwnerToPair = false;
 global.usePairingCode = true;
 global.pairingcode = "KOBENIMD";
