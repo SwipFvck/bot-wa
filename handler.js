@@ -148,3 +148,4 @@ async function handler(conn, m, msg) {
     `[HANDLER] Unknown command: ${command}`
   );
 }
+module.exports = handler;

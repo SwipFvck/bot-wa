@@ -2,10 +2,9 @@
   "name": "KOBENI?",
   "version": "1.0",
   "description": "V1 — (KOBENI-MD)",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "node index.js",
-    "postinstall": "mkdir -p node_modules/.bin && curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o node_modules/.bin/yt-dlp && chmod +x node_modules/.bin/yt-dlp"
+    "start": "node index.js"
   },
   "author": "KagenouReal",
   "dependencies": {

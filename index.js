@@ -1,4 +1,4 @@
-require("./system/setting.js");
+require("./settings.js");
 
 const makeWASocket = require("@whiskeysockets/baileys").default;
 const {
@@ -10,8 +10,8 @@ const readline = require("readline");
 const fs = require("fs");
 const path = require("path");
 
-const smsg = require("./smsg.js");
-const pathconn = require("./pathconn.js");
+const { smsg } = require("./smsg.js");
+const pathconn = require("./pathcoon.js");
 
 process.on("uncaughtException", (err) => {
   console.error("[ UNCAUGHT EXCEPTION ]", err);
@@ -46,10 +46,7 @@ const question = (text) => {
 let mainHandler;
 
 function loadMainHandler() {
-  const handlerPath = path.resolve(
-    __dirname,
-    "handler.js"
-  );
+  const handlerPath = "./handler.js"
 
   delete require.cache[require.resolve(handlerPath)];
 
@@ -329,14 +326,8 @@ console.log(`
     // Load handler
     loadMainHandler();
 
-    // Reload outdex
-    await reloadOutdex();
-
     // Start WhatsApp
     await startMBG();
-
-    // Start bot tambahan
-    startAllBot();
 
   } catch (err) {
 
